@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const matiContent = document.getElementById('matiContent');
     
     // Set correct password
-    const correctPassword = '11223344';
+    const correctPassword = '19876950';
     
     // Check if password is already stored in localStorage
     const isAuthenticated = localStorage.getItem('matiAccess') === 'true';
