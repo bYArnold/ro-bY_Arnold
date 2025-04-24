@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary bY Arnold</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-content">
+            <div class="welcome-header">
+                <div class="logo-container">
+                    <span class="logo-icon">📖</span>
+                    <h1 class="logo-text">Lexicon bY Arnold</h1>
+                </div>
+                <p class="tagline">Discover words. Expand knowledge.</p>
+            </div>
+            
+            <div class="welcome-cards">
+                <a href="dictionary.html" class="welcome-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Словник</h3>
+                    <p>Находи слова на Румынском.</p>
+                </a>
+                
+                <a href="mati.html" class="welcome-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Oooppssss</h3>
+                    <p>Не нажимай сюда </p>
+                </a>
+                
+                <a href="potuzno.html" class="welcome-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>ПОТУЖНОМЕТР</h3>
+                    <p>Вимірює потужність в повітрі</p>
+                </a>
+            </div>
+            
+            <div class="welcome-footer">
+                <p>Made with ❤ bY Arnold</p>
+            </div>
+        </div>
+        
+        <div class="theme-toggle" id="themeToggle">
+            <span class="theme-icon light">🌞</span>
+            <span class="theme-icon dark">🌙</span>
+        </div>
+    </div>
+    
+    <!-- Floating menu button -->
+    <div class="menu-container">
+        <button class="hamburger-btn" onclick="toggleMenu()">☰</button>
+    </div>
+    
+    <!-- Menu overlay -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    
+    <!-- Menu dropdown -->
+    <div class="dropdown-content" id="menuDropdown">
+        <button class="close-menu-btn" onclick="toggleMenu()">✖️</button>
+        <h2 class="menu-title">MENU</h2>
+        <div class="word-counter">Total Words: <span id="wordCount">0</span></div>
+        <div class="menu-list">
+            <a href="index.html" class="menu-item main-item">🏠 Главная</a>
+            <a href="dictionary.html" class="menu-item main-item">📚 Словник</a>
+            <div class="submenu-group">
+                <button class="menu-item main-item submenu-btn" onclick="toggleSubmenu(event)">📑 Категории ▼</button>
+                <div class="submenu-content">
+                    <a href="mati.html" class="menu-item sub-item">⚠️ Oooppssss</a>
+                    <a href="potuzno.html" class="menu-item sub-item">⚡ ПОТУЖНОМЕТР</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll to bottom button -->
+    <button class="round-btn scroll-btn" id="scrollBtn">▼</button>
+    
+    <!-- Animated background shapes -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

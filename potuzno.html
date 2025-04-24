@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potuzhnist bY Arnold</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="potuzno.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+<body class="potuzno-page">
+    <div class="container">
+        <div class="power-meter" id="powerMeter">
+            <div class="header">
+                <div class="title-container">
+                    <div class="flag"></div>
+                    <h1>ПОТУЖНОМЕТР</h1>
+                </div>
+                <div class="model">ПМ-2025</div>
+            </div>
+            
+            <div class="meter-container">
+                <div class="emoji-container">
+                    <span class="emoji" id="lowEmoji">😌</span>
+                    <span class="emoji" id="highEmoji">💀</span>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="segments-container" id="segmentsContainer">
+                        <!-- Segments will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="power-display">
+                <div class="power-value" id="powerValue">0</div>
+                <div class="power-label">ПТЖ</div>
+            </div>
+
+            <div class="controls">
+                <button class="sensitivity-button" id="sensitivityButton">
+                    <span class="sensitivity-icon">×</span>
+                    <span id="sensitivityValue">1.0</span>
+                </button>
+            </div>
+
+            
+        </div>
+    </div>
+    
+    <div class="critical-alert" id="criticalAlert">КРИТИЧНА ЗАВАНТАЖЕНІСТЬ!</div>
+    
+    <!-- Theme toggle button -->
+    <div class="theme-toggle" id="themeToggle">
+        <span class="theme-icon light">☀️</span>
+        <span class="theme-icon dark">🌙</span>
+    </div>
+    
+    <!-- Floating menu button -->
+    <div class="menu-container">
+        <button class="hamburger-btn" onclick="toggleMenu()">☰</button>
+    </div>
+    
+    <!-- Menu overlay -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    
+    <!-- Menu dropdown -->
+    <div class="dropdown-content" id="menuDropdown">
+        <button class="close-menu-btn" onclick="toggleMenu()">&times;</button>
+        <h2 class="menu-title">MENU</h2>
+        <div class="word-counter">Total Words: <span id="wordCount">0</span></div>
+        <div class="menu-list">
+            <a href="index.html" class="menu-item main-item">🏠 Главная</a>
+            <a href="dictionary.html" class="menu-item main-item">📚 Словник</a>
+            <div class="submenu-group">
+                <button class="menu-item main-item submenu-btn" onclick="toggleSubmenu(event)">🗂️ Категории ▼</button>
+                <div class="submenu-content">
+                    <a href="mati.html" class="menu-item sub-item">🔞 Oooppssss</a>
+                    <a href="potuzno.html" class="menu-item sub-item">⚡ ПОТУЖНОМЕТР</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="script.js"></script>
+    <script src="potuzno.js"></script>
+</body>
+</html>
